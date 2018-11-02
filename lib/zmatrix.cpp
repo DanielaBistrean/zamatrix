@@ -3,20 +3,18 @@
 #include "../include/zmatrix.h"
 
 Matrix::Matrix(int lines, int cols)
+: _nlines {lines}
+, _ncols {cols}
+, _elemCount { lines * cols }
 {
-	this->_nlines = lines;
-	this->_ncols = cols;
-	this->_elemCount = lines * cols;
-
 	this->_data = new int[this->_elemCount];
 }
 
 Matrix::Matrix(int lines, int cols, int value)
+: _nlines {lines}
+, _ncols {cols}
+, _elemCount { lines * cols }
 {
-	this->_nlines = lines;
-	this->_ncols = cols;
-	this->_elemCount = lines * cols;
-
 	this->_data = new int[this->_elemCount];
 	
 	for (int i = 0; i < this->_elemCount; ++i) {
@@ -26,7 +24,7 @@ Matrix::Matrix(int lines, int cols, int value)
 
 Matrix::~Matrix()
 {
-	// TODO: free memory
+	delete this->_data;
 }
 
 

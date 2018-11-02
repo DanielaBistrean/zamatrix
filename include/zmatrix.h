@@ -1,5 +1,5 @@
 #ifndef __ZMATRIX_H
-#define __ZMATRIX_H
+#define __ZMATRIX_H 1
 
 #include <iostream>
 

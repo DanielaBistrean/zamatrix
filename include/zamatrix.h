@@ -1,5 +1,5 @@
 #ifndef __ZAMATRIX_H
-#define __ZAMATRIX_H
+#define __ZAMATRIX_H 1
 
 class zMatrix
 {
